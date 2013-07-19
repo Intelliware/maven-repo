@@ -1,8 +1,3 @@
-for jar:
+make sure you are in the folder where file.jar is located
 
-mvn install:install-file -Dfile=./evernote-api-1.21.jar -DgroupId=evernote -DartifactId=evernote-api -Dversion=1.21 -Dpackaging=jar -DcreateChecksum=true
-
-for sources:
-
-mvn install:install-file -Dfile=./evernote-src.jar -DgroupId=evernote -DartifactId=evernote-api -Dversion=1.21 -Dpackaging=jar -DcreateChecksum=true -Dclassifier=sources
-
+mvn deploy:deploy-file -Dfile=./file.jar -DgroupId=org.springframework.data -DartifactId=spring-data-rest-core -Dversion=1.1.0-KENNA -Dpackaging=jar -DcreateChecksum=true -Durl=file://{path of this project in your local fs}
